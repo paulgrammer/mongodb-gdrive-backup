@@ -1,12 +1,12 @@
 {
-  "name": "mongodb-backup-gdrive",
+  "name": "mongodb-gdrive-backup",
   "version": "1.0.0",
   "description": "Simple mongodb backup to google drive",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Paul Jeremiah Mugaya",
   "license": "ISC",
   "dependencies": {
     "cron": "^1.8.2",
@@ -22,5 +22,22 @@
     "uuid": "^8.3.2",
     "xtend": "^4.0.2",
     "zip-dir": "^2.0.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulgrammer/mongodb-gdrive-backup.git"
+  },
+  "keywords": [
+    "mongodb",
+    "backup",
+    "cron",
+    "auto",
+    "google-drive",
+    "drive"
+  ],
+  "bugs": {
+    "url": "https://github.com/paulgrammer/mongodb-gdrive-backup/issues"
+  },
+  "homepage": "https://github.com/paulgrammer/mongodb-gdrive-backup#readme"
 }
