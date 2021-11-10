@@ -1,0 +1,26 @@
+{
+  "name": "mongodb-backup-gdrive",
+  "version": "1.0.0",
+  "description": "Simple mongodb backup to google drive",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cron": "^1.8.2",
+    "decompress-zip": "^0.3.3",
+    "express": "^4.17.1",
+    "fs-extra": "^10.0.0",
+    "google-auth-library": "^7.10.2",
+    "google-drive-getfilelist": "^1.0.5",
+    "googleapis": "^91.0.0",
+    "mongodb-backup-4x": "^3.2.1",
+    "mongodb-restore": "^1.6.2",
+    "multer": "^1.4.3",
+    "uuid": "^8.3.2",
+    "xtend": "^4.0.2",
+    "zip-dir": "^2.0.0"
+  }
+}
