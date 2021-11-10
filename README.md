@@ -1,7 +1,5 @@
 # mongodb-gdrive-backup
 
-# EXAMPLE
-
 ```javascript
 const BackupService = require("mongodb-gdrive-backup");
 
@@ -12,10 +10,10 @@ let service = new BackupService({
       /* google service account configuration here*/
     },
     folder: "shared folder here",
-    keep: 5, // number of backups to hold behind
+    keep: 5 /* number of backups to hold behind */,
   },
   auto: {
-    cron: "00 00 00 * * *", // https://crontab.cronhub.io/
+    cron: "00 00 00 * * *" /* https://crontab.cronhub.io/ */,
     timezone: "Africa/Nairobi",
   },
 });
@@ -25,11 +23,11 @@ service.on("restore", (name, id) => {});
 
 // local disk
 service.backup({ saveTo: "./test.zip" }).then(() => {
-  service.restore({ backupPath: "./test.zip" }).then(() => console.log("done"));
+  service.restore({ backupPath: "./test.zip" }).then(() => {});
 });
 
 // google drive
-service.backup({ fileName: "test.zip" }).then(() => {
-  service.restore({ backupName: "test.zip" }).then(() => console.log("done"));
+service.backup({ backupName: "test.zip" }).then(() => {
+  service.restore({ backupName: "test.zip" }).then(() => {});
 });
 ```

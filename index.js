@@ -40,7 +40,7 @@ class Backup extends EventEmitter {
 
   async backup({
     saveTo,
-    fileName = `${moment().format("DD-MM-YYYY")}.zip`,
+    backupName = `${moment().format("DD-MM-YYYY")}.zip`,
     auto,
     toBuffer,
   } = {}) {
@@ -73,12 +73,12 @@ class Backup extends EventEmitter {
 
       let upRes = await this.driveService.upload({
         folder: this.config.drive.folder,
-        fileName,
+        fileName: backupName,
         mimeType: "application/zip",
         body: bufferStream,
       });
 
-      this.emit("backup", fileName, upRes.data.id);
+      this.emit("backup", backupName, upRes.data.id);
     }
 
     return streamBuffer;
